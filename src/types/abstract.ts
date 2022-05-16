@@ -1,18 +1,18 @@
+export interface IMeal {
+	participants: IParticipant[];
+	total: number;
+}
+
 export interface IParticipant {
-	id: string;
 	name: string;
 	amount: number;
 }
 
-export interface IMeal {
-	participants: IParticipant[];
-	total: number;
-	prorated: boolean;
+export interface IMealCalcResult extends IMeal {
+	participants: IParticipantCalcResult[];
 }
 
-export interface IResponse<T = any> {
-	status: number;
-	data: T;
+export interface IParticipantCalcResult extends IParticipant {
+	proratedAmount: number;
+	evenSplitAmount: number;
 }
-
-export type CalcResult = IResponse<IParticipant[]>;

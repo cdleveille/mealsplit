@@ -3,3 +3,21 @@
 	padding: 0;
 	margin: 0;
 }
+
+html,
+body {
+	background-color: #222222;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.button {
+	font-size: 2rem;
+	border-width: 3px;
+}
+
+.button:hover {
+	border-width: 3px;
+}
